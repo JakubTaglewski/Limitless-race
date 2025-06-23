@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LIMITLESS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="main_style.css">
+  <link rel="stylesheet" href="form_style.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="notification_style.css">
+  <script src="script.js"></script>
+  <script src="submit.js"></script>
+  <script src="notification_script.js"></script>
+  
+
+</head>
+<body>
+
+
+  <header>
+    <div class="logo">LIMITLESS</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li class="about_us_menu"><a href="#info">O biegu</a></li>
+        <li><a href="contact.php">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <section class="main" id="home">
+    <div class="main-content">
+
+      <h1 class="limitless-main-text">LIMITLESS</h1>
+      <p class="subtitle-first">Bieg charytatywny bez granic. </p>
+        <p class="subtitle-second"> Przekraczaj własne limity!</p><br>
+      <p class="date-city-km">• 1 lipca 2025 • Warszawa / Łódź • 5km / 10km</p>
+      <button class="join-us-btn" onclick="openForm()">Dołącz do nas</p></button>
+    </div>
+  </section>
+
+
+  <section class="info-section" id="info">
+    <h2>Bieg Charytatywny LIMITLESS</h2>
+    <p>
+      Dołącz do nas w wyjątkowym wydarzeniu, które łączy pasję do biegania z pomocą potrzebującym.
+      Każdy kilometr ma znaczenie, każdy uczestnik pomaga zmienić czyjś świat na lepsze.
+    </p>
+    <div class="info-box">
+      <div class="info-card">
+      <i class="fa-regular fa-calendar fa-2xl"></i>
+      <br></br>
+        <h3>Data</h3>
+        <p>1 lipca 2025</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-regular fa-location-dot fa-2xl"></i>
+        <br></br>
+        <h3>Lokalizacja</h3>
+        <p>Warszawa <br> Łódź</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-regular fa-bullseye fa-2xl"></i>
+        <br></br>
+        <h3>Cel</h3>
+        <p>Wsparcie organizacji charytatywnej na rzecz walki z dyskryminacją</p>
+      </div>
+      <div class="info-card">
+        <i class="fa-regular fa-road fa-2xl"></i>
+        <br></br>
+        <h3>Dystans</h3>
+        <p>5km – trasa rekreacyjna <br/>10km – trasa sportowa</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="form" class="form">
+    <div class="form-content">
+      <span class="closeForm-btn" onclick="closeForm()">&times;</span>
+      <h2>Dołącz do biegu LIMITLESS</h2>
+      <div class="form-container">
+        <form id="signupForm" action="submit.php" method="post" accept-charset="utf-8">
+          <div class="form-group">
+            <label for="name">Imię</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Wprowadź imię" required />
+          </div>
+          <div class="form-group">
+            <label for="surname">Nazwisko</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Wprowadź nazwisko" required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="twoj@email.com"
+                   required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Numer telefonu</label>
+            <input type="tel" id="phone" name="phone" placeholder="123 456 789" required />
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Data urodzenia</label>
+            <input type="date" id="birthdate" name="birthdate" required />
+          </div>
+          <div class="form-group">
+            <label>Wybierz dystans</label>
+            <div class="distance-options">
+              <div>
+                <input type="radio" id="distance5" name="distance" value="5km" required />
+                <label for="distance5">5 km</label>
+              </div>
+              <div>
+                <input type="radio" id="distance10" name="distance" value="10km" required />
+                <label for="distance10">10 km</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group checkbox-container">
+            <input type="checkbox" id="terms" name="terms" required />
+            <label for="terms">Akceptuję regulamin biegu charytatywnego <p class="limitless-text-terms">LIMITLESS</p></label>
+          </div>
+          <button type="submit" class="submit-btn" action="submit.php">Zapisz się</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+
+
+  <footer>
+    <p>LIMITLESS &copy; 2025. Wszystkie prawa zastrzeżone.</p>
+  </footer>
+
+  
+  
+</body>
+</html>

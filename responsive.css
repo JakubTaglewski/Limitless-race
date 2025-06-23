@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+    .main h1 {
+      font-size: 2.8rem;
+    }
+    .main p.subtitle-first {
+      font-size: 1.2rem;
+    }
+    .main p.subtitle-second {
+      font-size: 1.2rem;
+    }
+    nav ul {
+      gap: 1rem;
+    }
+    .info-box {
+      flex-direction: column;
+      align-items: center;
+    }
+    .about_us_menu {
+      display: none;
+    }
+  }
+  @media (max-width: 480px) {
+    .main h1 {
+      font-size: 2.2rem;
+    }
+    .main p.subtitle-first {
+      font-size: 1.1rem;
+    }
+    .hero p.subtitle-second {
+      font-size: 1.1rem;
+    }
+    .hero p.date-city-km {
+      font-size: 0.95rem;
+    }
+    .info-box {
+      gap: 1rem;
+    }
+    .info-card {
+      width: 100%;
+      max-width: 350px;
+    }
+    .about_us_menu {
+      display: none;
+    }
+  }
+
+
+

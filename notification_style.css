@@ -1,0 +1,22 @@
+/* === toast powiadomień === */
+#toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 90%;
+    padding: 12px 20px;
+    background-color: #2a9d8f;      /* przykład koloru – dostosuj do swojego motywu */
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10000;
+  }
+  #toast.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
